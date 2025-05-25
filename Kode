@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+
+//Daftar menu seblak paketan
+    int menuSeblak, hargaPaketan, totalPaketan = 0;
+    char paketanSeblak[3][50] ={
+        "Seblak Original Rp.10.000",
+        "Seblak Tulang Rp.13.000",
+        "Seblak Ceker Rp.14.000"
+    };
+    printf("Daftar Menu Seblak Paketan:\n");
+    for (int i = 0; i < 3; i++) {
+        printf("%d. %s\n", i + 1, paketanSeblak [i]);
+    }
+    printf("Masukkan jumlah paketan seblak: ");
+    scanf("%d", &menuSeblak);
+
+    for(int i = 1; i <= menuSeblak; i++)
+    {
+        printf("Masukkan harga paketan ke-%d: ", i);
+        scanf("%d", &hargaPaketan);
+
+        while(hargaPaketan <= 0)
+        {
+            printf("Harga tidak valid. Masukkan ulang\n");
+            scanf("%d", &hargaPaketan);
+        }
+        totalPaketan += hargaPaketan;
+    }
+    printf("Total harga paketan seblak: %d\n", totalPaketan);
+    
+
+//Daftar topping tambahan
+    int menuTopping, hargaTopping, totalTopping = 0;
+    char toppingTambahan[5][50] ={
+        "Dumpling Keju Rp.3000",
+        "Dumpling Ayam Rp.3000",
+        "Batagor Lidah Rp.2000",
+        "Siomay Kering Rp.2000",
+        "Kerupuk Cikur Rp.1000"
+    };
+    printf("Daftar Topping Tambahan:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d. %s\n", i + 1, toppingTambahan[i]);
+    }
+    printf("Masukkan jumlah topping tambahan: ");
+    scanf("%d", &menuTopping);
+
+    for(int i = 1; i <= menuTopping; i++)
+    {
+        printf("Masukkan harga topping ke-%d: ", i);
+        scanf("%d", &hargaTopping);
+
+        while(hargaTopping <= 0)
+        {
+            printf("Harga tidak valid. Masukkan ulang\n");
+            scanf("%d", &hargaTopping);
+        }
+        totalTopping += hargaTopping;
+    }
+    printf("Total harga tambahan topping: %d\n", totalTopping);
+    
+    int totalHarga = totalPaketan + totalTopping;
+    printf("Total Harga Seblak : Rp.%d", totalHarga);
+}
