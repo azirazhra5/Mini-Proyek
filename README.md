@@ -26,7 +26,7 @@ Kak Meyda minta dibuatkan program untuk Kasie Seblak yang dimana akan menampilka
   -Loop: For untuk menampilkan isi array, menginput harga yang diminta pengguna atau sudah diketahui jumlah pilihannya.
   -Fungsi: main(), printf(), scanf().
   -Array: char paketanSeblak[3][50] dan toppigTambahan[5][50], artinya ada 3 dan 5 menu pilihan dan 50 string maksimal huruf yang ada.
-  -Aritmatika
+  -Aritmatika: menghitung total harga keseluruhan dari penjumlahan total paketan seblak dan total topping tambahan.
 
 ##Link Video Demo
 https://youtu.be/oYDsbkJVX6k?si=0qnylHSEuYbPGV3p
